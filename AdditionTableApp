@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class AdditionTableApp {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter a number from 3 to 20: ");
+        int num = input.nextInt();
+        
+        System.out.print("+  ");
+        for(int i = 1; i <= num; i++) {
+            System.out.printf("%4d", i);
+        }
+        System.out.println();
+        
+        for(int row = 1; row <= num; row++) {
+            System.out.printf("%-3d", row);
+            
+            for(int col = 1; col <= num; col++) {
+                System.out.printf("%4d", row + col);
+            }
+            System.out.println();
+        }
+        
+        input.close();
+    }
+}
